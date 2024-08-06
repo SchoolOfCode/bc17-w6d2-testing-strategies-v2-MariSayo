@@ -51,7 +51,7 @@ You are tasked with testing a registration form that has the following input fie
 
 | Input Field | Valid Equivalence Classes | Invalid Equivalence Classes |
 |-------------|---------------------------|----------------------------|
-| Age         |                           |                            |
+| Age         |           18 to 120       |        <18, >120                    |
 
 ### Task 2: Identify Equivalence Classes for Email
 1. Identify the valid equivalence classes for the Email field.
@@ -60,7 +60,16 @@ You are tasked with testing a registration form that has the following input fie
 
 | Input Field | Valid Equivalence Classes | Invalid Equivalence Classes |
 |-------------|---------------------------|----------------------------|
-| Email       |                           |                            |
+| Email       |    user@domain.com        |              @userdomain.com
+                                                         @domainuser.com
+                                                         userdomain@.com
+                                                         domainuser@.com
+                                                          @userdomain.co.uk
+                                                         @domainuser.co.uk
+                                                         userdomain@.co.uk
+                                                         domainuser@.co.uk
+                                                         anyuppercase whoops
+                                                         Correct: missing Missing @ symbol or Missing domain or Invalid characters          |
 
 ### Task 3: Identify Equivalence Classes for Password
 1. Identify the valid equivalence classes for the Password field.
@@ -69,7 +78,7 @@ You are tasked with testing a registration form that has the following input fie
 
 | Input Field | Valid Equivalence Classes | Invalid Equivalence Classes |
 |-------------|---------------------------|----------------------------|
-| Password    |                           |                            |
+| Password    | 8 to 20 characters        |           uppercase < 1, lowercase < 1, digit < 1                 |
 
 ### Task 4: Discuss and Share
 1. Discuss your findings with your group.

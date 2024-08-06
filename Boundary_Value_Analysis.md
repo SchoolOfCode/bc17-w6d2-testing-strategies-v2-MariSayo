@@ -38,11 +38,11 @@ You are tasked with testing a search functionality that allows users to specify 
 
 | Boundary Values |
 |-----------------|
-|                 |
-|                 |
-|                 |
-|                 |
-|                 |
+|   1 to 100      |
+|   -1 -100       |
+|   101 1001      |
+|      0          |
+|    1.1          |
 
 ### Task 2: Design Test Cases
 1. Design test cases to cover the identified boundary values.
@@ -51,11 +51,11 @@ You are tasked with testing a search functionality that allows users to specify 
 
 | Test Case | Input Value | Expected Result |
 |-----------|-------------|-----------------|
-|           |             |                 |
-|           |             |                 |
-|           |             |                 |
-|           |             |                 |
-|           |             |                 |
+|    TC1    |   1, 100    |   valid         |  invalid = error message
+|    TC2    |      -1     |  invalid        |  valid = result
+|    TC3    |    -100     |   invalid       |
+|    TC4    |    101, 1001|   invalid       |  did not consider non-numeric
+|    TC5    |     0       | no response     |
 
 ### Task 3: Discuss and Share
 1. Discuss your boundary values and test cases with your group.
